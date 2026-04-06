@@ -30,7 +30,7 @@ export function AddTransactionModal() {
       amount: parseFloat(amount),
       category,
       type,
-      date: new Date().toISOString().split("T")[0],
+      date: new Date().toLocaleDateString("en-GB"), // Produces DD/MM/YYYY
     });
 
     setOpen(false);

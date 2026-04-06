@@ -37,9 +37,14 @@ export function DashboardOverview() {
 
   // Aggregate data for AreaChart (balance trend simple approx)
   const sortedTransactions = [...transactions].sort((a, b) => {
-    const [da, ma, ya] = a.date.split('/');
-    const [db, mb, yb] = b.date.split('/');
-    return new Date(`${ya}-${ma}-${da}`).getTime() - new Date(`${yb}-${mb}-${db}`).getTime();
+    const parseDate = (d: string) => {
+      if (d.includes('/')) {
+        const [da, ma, ya] = d.split('/');
+        return new Date(`${ya}-${ma}-${da}`).getTime();
+      }
+      return new Date(d).getTime();
+    };
+    return parseDate(a.date) - parseDate(b.date);
   });
 
   const areaData = sortedTransactions.reduce((acc, t) => {

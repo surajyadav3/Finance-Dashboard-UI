@@ -33,9 +33,14 @@ export function TransactionsTable() {
     .sort((a, b) => {
       let cmp = 0;
       if (filters.sortBy === "date") {
-        const [da, ma, ya] = a.date.split('/');
-        const [db, mb, yb] = b.date.split('/');
-        cmp = new Date(`${ya}-${ma}-${da}`).getTime() - new Date(`${yb}-${mb}-${db}`).getTime();
+        const parseDate = (d: string) => {
+          if (d.includes('/')) {
+            const [da, ma, ya] = d.split('/');
+            return new Date(`${ya}-${ma}-${da}`).getTime();
+          }
+          return new Date(d).getTime(); // Handles YYYY-MM-DD
+        };
+        cmp = parseDate(a.date) - parseDate(b.date);
       } else {
         cmp = a.amount - b.amount;
       }
