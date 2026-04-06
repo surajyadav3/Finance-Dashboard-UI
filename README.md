@@ -62,3 +62,8 @@ Zorvyn Fintech is a high-end, interactive finance dashboard designed to showcase
 
 _Tip: Use the Profile link in the Topbar or Sidebar to visit Suraj's profile!_
 # Financial-Dashboard-UI
+<img width="1919" height="986" alt="Screenshot 2026-04-06 171804" src="https://github.com/user-attachments/assets/3189f017-3363-4ed8-8912-acfd307910a7" />
+<img width="1919" height="991" alt="Screenshot 2026-04-06 171809" src="https://github.com/user-attachments/assets/953b4d40-ae1c-48e9-8054-e4ad71d1b395" />
+<img width="1919" height="984" alt="Screenshot 2026-04-06 171814" src="https://github.com/user-attachments/assets/40396e73-c2be-4f15-a50d-27ecbb3855c2" />
+<img width="1919" height="991" alt="Screenshot 2026-04-06 171824" src="https://github.com/user-attachments/assets/98950a20-c677-4c28-89a6-61b56674d0d8" />
+
