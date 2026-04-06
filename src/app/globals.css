@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -49,38 +50,38 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: oklch(0.99 0.005 90); /* White with little cream */
+  --foreground: oklch(0.1 0 0); /* Near Black */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.1 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.1 0 0);
+  --primary: oklch(0.1 0 0); /* Black buttons */
+  --primary-foreground: oklch(0.99 0.005 90); /* Cream text */
+  --secondary: oklch(0.95 0.01 90); /* Slightly darker cream */
+  --secondary-foreground: oklch(0.1 0 0);
+  --muted: oklch(0.95 0.01 90);
+  --muted-foreground: oklch(0.4 0 0);
+  --accent: oklch(0.95 0.01 90);
+  --accent-foreground: oklch(0.1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
+  --border: oklch(0.90 0.01 90); /* Noticeable but soft border */
+  --input: oklch(0.90 0.01 90);
+  --ring: oklch(0.1 0 0);
+  --chart-1: oklch(0.6 0.1 260); /* Blue */
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: oklch(0.99 0.005 90);
+  --sidebar-foreground: oklch(0.1 0 0);
+  --sidebar-primary: oklch(0.1 0 0);
+  --sidebar-primary-foreground: oklch(0.99 0.005 90);
+  --sidebar-accent: oklch(0.95 0.01 90);
+  --sidebar-accent-foreground: oklch(0.1 0 0);
+  --sidebar-border: oklch(0.90 0.01 90);
+  --sidebar-ring: oklch(0.1 0 0);
 }
 
 .dark {
@@ -122,9 +123,34 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-y-auto;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: "tnum"; /* Enable tabular numbers globally as requested for transaction field style */
   }
   html {
-    @apply font-sans;
+    @apply scroll-smooth overflow-y-auto h-auto;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@utility glass {
+  @apply bg-background/60 backdrop-blur-xl border border-black/5 dark:border-white/5 shadow-xl;
+}
+
+@utility glass-card {
+  @apply bg-card/80 backdrop-blur-xl border border-black/5 dark:border-white/5 shadow-sm relative overflow-hidden transition-all duration-300;
+}
+
+@utility glass-card-hover {
+  @apply hover:bg-card hover:-translate-y-1 hover:shadow-lg hover:border-black/10 dark:hover:border-white/10;
+}
+
+@utility glow {
+  @apply relative;
+}
+
+@layer utilities {
+  .glow::before {
+    @apply content-[""] absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl blur opacity-20 transition duration-1000 group-hover:opacity-50 group-hover:duration-200;
   }
 }
