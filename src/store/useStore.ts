@@ -81,7 +81,7 @@ export const useStore = create<StoreState>()(
       })),
     }),
     {
-      name: 'finova-dashboard-v2-storage',
+      name: 'fintech-dashboard-storage',
     }
   )
 );

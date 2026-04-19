@@ -64,7 +64,7 @@ export function TransactionsTable() {
     const blob = new Blob([[headers, ...rows].join("\n")], { type: "text/csv" });
     const link = document.createElement("a");
     link.href = URL.createObjectURL(blob);
-    link.download = "zorvyn_transactions.csv";
+    link.download = "fintech_dashboard_transactions.csv";
     link.click();
   };
 

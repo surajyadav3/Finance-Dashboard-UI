@@ -1,6 +1,6 @@
-# Zorvyn Fintech - Premium Finance Dashboard
+# Fintech - Premium Finance Dashboard
 
-Zorvyn Fintech is a high-end, interactive finance dashboard designed to showcase modern frontend capabilities and premium design aesthetics.
+Fintech is a high-end, interactive finance dashboard designed to showcase modern frontend capabilities and premium design aesthetics.
 
 ## 🚀 Concept & Design Decisions
 

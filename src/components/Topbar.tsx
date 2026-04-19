@@ -54,7 +54,7 @@ export function Topbar() {
               <path d="M8 20C14 20 18 12 18 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
             </svg>
           </div>
-          <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">zorvyn fintech</span>
+          <span className="text-xl font-bold tracking-tight bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent">Fintech</span>
         </Link>
 
         {/* Center Nav */}
