@@ -20,7 +20,7 @@ export function Footer() {
               <path d="M8 20C14 20 18 12 18 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
             </svg>
           </div>
-          <span>© 2026 Zorvyn Fintech. Built by <span className="font-semibold text-foreground">Suraj Yadav</span></span>
+          <span>© 2026 Fintech. Built by <span className="font-semibold text-foreground">Suraj Yadav</span></span>
         </div>
         <div className="flex items-center gap-3">
           <a

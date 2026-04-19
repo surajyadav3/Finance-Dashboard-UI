@@ -6,8 +6,8 @@ import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Zorvyn Fintech — Modern Dashboard",
-  description: "A clean, professional finance dashboard for Zorvyn Fintech, built with Next.js and Tailwind CSS.",
+  title: "Fintech",
+  description: "A clean, professional fintech dashboard, built with Next.js and Tailwind CSS.",
 };
 
 export default function RootLayout({
